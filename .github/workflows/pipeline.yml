@@ -33,3 +33,7 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "outisa-pokedex" #Must be unique in Heroku
           heroku_email: ${{secrets.EMAIL}}
+          healthcheck: "https://outisa-pokedex.herokuapp.com/health"
+          checkString: "ok"
+          healthcheck: "https://outisa-pokedex.herokuapp.com/version"
+          checkString: "2"
