@@ -38,7 +38,7 @@ jobs:
           heroku_app_name: "outisa-pokedex" #Must be unique in Heroku
           heroku_email: ${{secrets.EMAIL}}
           healthcheck: https://outisa-pokedex.herokuapp.com/health
-          checkString: "ok"
+          checkString: "OK!"
           rollbackonhealthcheckfailed: true
       - uses: actions/checkout@v2
         with:
