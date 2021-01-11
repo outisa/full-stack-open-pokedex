@@ -1,0 +1,15 @@
+name: Scheduled healthcheck
+
+on:
+  schedule:
+    - cron '0 * * * * *'
+jobs:
+  scheduled_healthcheck:
+    runs-on: ubuntu-18.04    
+    steps:
+      - name: Check the deployed service URL
+        uses: jtalk/url-health-check-action@v1.2
+        with:
+          url: https://outisa-pokedex.herokuapp.com
+          max-attempts: 2
+          retry-delay: 10s
