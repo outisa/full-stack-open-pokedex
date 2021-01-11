@@ -59,7 +59,7 @@ jobs:
           custom_payload: |
             {
               attachments: [{
-                color: '${{ job.status }}' === 'success' ? 'good'
+                color: 'good',
                 text: `A new version deployed to repository ${process.env.AS_REPO} by ${process.env.AS_AUTHOR} build took ${process.env.AS_TOOK}`,
               }]
             }
